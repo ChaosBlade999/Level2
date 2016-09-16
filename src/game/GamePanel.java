@@ -8,9 +8,8 @@ import javax.swing.JPanel;
 import javax.swing.Timer;
 
 public class GamePanel extends JPanel implements ActionListener{
-	int xm;
-	int ym;
-	GameObject go=new GameObject(400,100,50,50,xm,ym,0,0);
+
+	Player go=new Player(400,100,50,50,0,0,0,0);
 	GamePanel(){
 	Timer t=new Timer(5,this);
 	t.start();
@@ -25,9 +24,5 @@ public class GamePanel extends JPanel implements ActionListener{
 		// TODO Auto-generated method stub
 		repaint();
 		go.update();
-	}
-	public void move(){
-		xm=1;
-		System.out.println("wc");
 	}
 }
