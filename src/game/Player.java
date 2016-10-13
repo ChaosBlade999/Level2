@@ -42,6 +42,8 @@ public class Player {
 		at.rotate(r,x+(50/2),y+(50/2));
 		g2.setTransform(at);
 		g2.drawImage(image, x,y,50,50,null);
+		at.rotate(-r,x+(50/2),y+(50/2));
+		g2.setTransform(at);
 	}
 	void update(){
 		x+=xi;
