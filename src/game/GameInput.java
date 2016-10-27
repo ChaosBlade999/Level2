@@ -13,19 +13,19 @@ public class GameInput implements KeyListener{
 	public void keyPressed(KeyEvent e) {
 		// TODO Auto-generated method stub
 		if(e.getKeyChar()=='w'||e.getKeyChar()=='W'){
-			GamePanel.apy=3;
+			GamePanel.apy=8;
 			Player.r=0;
 		}
 		if(e.getKeyChar()=='s'||e.getKeyChar()=='S'){
-			GamePanel.apy=-3;
+			GamePanel.apy=-8;
 			Player.r=Math.PI;
 		}
 		if(e.getKeyChar()=='d'||e.getKeyChar()=='D'){
-			GamePanel.apx=-3;
+			GamePanel.apx=-8;
 			Player.r=Math.PI/2;
 		}
 		if(e.getKeyChar()=='a'||e.getKeyChar()=='A'){
-			GamePanel.apx=3;
+			GamePanel.apx=8;
 			Player.r=Math.PI*1.5;
 		}
 	}
@@ -36,5 +36,4 @@ public class GameInput implements KeyListener{
 		GamePanel.apx=0;
 		GamePanel.apy=0;
 	}
-
 }

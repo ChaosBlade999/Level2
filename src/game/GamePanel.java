@@ -22,7 +22,7 @@ public class GamePanel extends JPanel implements ActionListener{
 	StoneWall sw4=new StoneWall(ax+200,ay+200);
 	WoodWall ww=new WoodWall(ax+100,ay+100);
 	GamePanel(){
-	Timer t=new Timer(5,this);
+	Timer t=new Timer(48,this);
 	t.start();
 	}
 	

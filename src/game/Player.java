@@ -2,6 +2,7 @@ package game;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Rectangle;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 
@@ -18,6 +19,7 @@ public class Player {
 	int hi;
 	static double r=0;
 	BufferedImage image;
+	public static Rectangle pcollision=new Rectangle(xi,yi,100,100); 
 	Player(int ox,int oy,int ow,int oh, int oxi,int oyi,int owi,int ohi){
 		try
 		{
