@@ -19,7 +19,7 @@ public class Player {
 	int hi;
 	static double r=0;
 	BufferedImage image;
-	public static Rectangle pcollision=new Rectangle(xi,yi,100,100); 
+	public static Rectangle pcollision=new Rectangle(xi,yi,50,50); 
 	Player(int ox,int oy,int ow,int oh, int oxi,int oyi,int owi,int ohi){
 		try
 		{

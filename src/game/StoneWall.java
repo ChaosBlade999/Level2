@@ -9,7 +9,7 @@ import javax.imageio.ImageIO;
 public class StoneWall {
 	int swx;
 	int swy;
-	protected Rectangle collision=new Rectangle(swx,swy,50,50); 
+	Rectangle collision=new Rectangle(900,550,50,50); 
 	BufferedImage image;
 	StoneWall(int swox, int swoy) {
 		try {
@@ -22,7 +22,7 @@ public class StoneWall {
 	}
 	void draw(Graphics g){
 		g.drawImage(image, swx,swy,50,50,null);
-		collision.setBounds(swx, swy, 50, 50);
+		collision.setLocation(900,550);
 		if(collision.intersects(Player.pcollision)){
 			System.out.println("Wow!!!");
 		}
