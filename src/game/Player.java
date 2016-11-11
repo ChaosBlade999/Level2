@@ -9,8 +9,8 @@ import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
 
 public class Player {
-	int x;
-	int y;
+	static int x;
+	static int y;
 	int w;
 	int h;
 	static int xi;
@@ -19,7 +19,7 @@ public class Player {
 	int hi;
 	static double r=0;
 	BufferedImage image;
-	public static Rectangle pcollision=new Rectangle(xi,yi,50,50); 
+	public static Rectangle pcollision=new Rectangle(x,y,50,50); 
 	Player(int ox,int oy,int ow,int oh, int oxi,int oyi,int owi,int ohi){
 		try
 		{
