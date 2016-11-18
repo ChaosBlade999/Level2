@@ -9,6 +9,8 @@ import javax.imageio.ImageIO;
 public class StoneWall {
 	int swx;
 	int swy;
+	final int xp;
+	final int yp;
 	Rectangle collision=new Rectangle(swx,swy,50,50); 
 	BufferedImage image;
 	StoneWall(int swox, int swoy) {
@@ -17,14 +19,17 @@ public class StoneWall {
 		} catch (Exception e) {
 			System.err.println("There was an error loading your image.");
 		}
-		swx = swox;
-		swy = swoy;
+		xp = swox;
+		yp = swoy;
 	}
 	void draw(Graphics g){
 		g.drawImage(image, swx,swy,50,50,null);
+	}
+	public boolean update(int ax, int ay) {
+		// TODO Auto-generated method stub
+		swx=ax+xp;
+		swy=ay+yp;
 		collision.setLocation(swx,swy);
-		if(collision.intersects(Player.pcollision)){
-			System.out.println("Wow!!!");
-		}
+		return collision.intersects(Player.pcollision);
 	}
 }

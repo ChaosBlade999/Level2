@@ -19,7 +19,7 @@ public class Player {
 	int hi;
 	static double r=0;
 	BufferedImage image;
-	public static Rectangle pcollision=new Rectangle(x,y,50,50); 
+	public static Rectangle pcollision;
 	Player(int ox,int oy,int ow,int oh, int oxi,int oyi,int owi,int ohi){
 		try
 		{
@@ -37,6 +37,7 @@ public class Player {
 		yi=oyi;
 		wi=owi;
 		hi=ohi;
+		pcollision=new Rectangle(x,y,50,50);
 	}
 	void draw(Graphics g){
 		AffineTransform at=new AffineTransform();
