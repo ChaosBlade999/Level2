@@ -43,7 +43,7 @@ public class Zombie {
 		Graphics2D g2 = (Graphics2D) g;
 		// at.rotate(r, zx + (50 / 2), zy + (50 / 2));
 		g2.setTransform(at);
-		g2.drawImage(image, zx, zy, 50, 50, null);
+		// g2.drawImage(image, zx, zy, 50, 50, null);
 		at.rotate(-r, zx + (50 / 2), zy + (50 / 2));
 		g2.setTransform(at);
 	}
@@ -53,6 +53,18 @@ public class Zombie {
 		zy += zyi;
 		zw += zwi;
 		zh += zhi;
+		if (zx < 900) {
+			zx += 2;
+		}
+		if (zy < 550) {
+			zy += 2;
+		}
+		if (zx > 900) {
+			zx -= 2;
+		}
+		if (zy > 550) {
+			zy -= 2;
+		}
 	}
 
 }
