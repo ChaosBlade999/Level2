@@ -50,6 +50,25 @@ public class Player {
 		at.rotate(-r, x + (50 / 2), y + (50 / 2));
 		g2.setTransform(at);
 		g.setColor(new Color(213, 196, 77));
+		
+		if (aimX != 925 && aimY != 575) {
+			// compute the slope (b) and intersects x and y of the laser beam
+
+			// Get a list of things the laser can interset (walls, zombies...)
+
+			// For each item in the list
+			   // If the object intersects with a rectangle (925,575) x (aimX, aimY) then
+					// For both horizontal lines
+						// px = b * p1y, if p1x <= px <= p2x then px, p1y is a point of intersection
+			        // For both vertical lines
+						// py = p1x/b, if p1y <= py <= p2y then p1x, py is a point of intersection
+
+			// If the item intersects, keep track of the intersection point an compute the distance
+
+			// Keep track of the intersecting object with the shortest distance, that is what you hit.
+
+			// Make that point the new aimX, aimY
+		}
 		g.drawLine(925, 575, aimX, aimY);
 		aimX = 925;
 		aimY = 575;
